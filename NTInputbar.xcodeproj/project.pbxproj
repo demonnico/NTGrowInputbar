@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		64A30D171CA90D88001A7E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A30D161CA90D88001A7E71 /* AppDelegate.swift */; };
+		64A30D191CA90D88001A7E71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A30D181CA90D88001A7E71 /* ViewController.swift */; };
+		64A30D1C1CA90D88001A7E71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A30D1A1CA90D88001A7E71 /* Main.storyboard */; };
+		64A30D1E1CA90D88001A7E71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A30D1D1CA90D88001A7E71 /* Assets.xcassets */; };
+		64A30D211CA90D88001A7E71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A30D1F1CA90D88001A7E71 /* LaunchScreen.storyboard */; };
+		64A30D2C1CA90D88001A7E71 /* NTInputbarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A30D2B1CA90D88001A7E71 /* NTInputbarTests.swift */; };
+		64A30D371CA90D88001A7E71 /* NTInputbarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A30D361CA90D88001A7E71 /* NTInputbarUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		64A30D281CA90D88001A7E71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64A30D0B1CA90D88001A7E71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64A30D121CA90D88001A7E71;
+			remoteInfo = NTInputbar;
+		};
+		64A30D331CA90D88001A7E71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64A30D0B1CA90D88001A7E71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64A30D121CA90D88001A7E71;
+			remoteInfo = NTInputbar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		64A30D131CA90D88001A7E71 /* NTInputbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NTInputbar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64A30D161CA90D88001A7E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		64A30D181CA90D88001A7E71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		64A30D1B1CA90D88001A7E71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		64A30D1D1CA90D88001A7E71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		64A30D201CA90D88001A7E71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		64A30D221CA90D88001A7E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64A30D271CA90D88001A7E71 /* NTInputbarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NTInputbarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		64A30D2B1CA90D88001A7E71 /* NTInputbarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTInputbarTests.swift; sourceTree = "<group>"; };
+		64A30D2D1CA90D88001A7E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64A30D321CA90D88001A7E71 /* NTInputbarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NTInputbarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		64A30D361CA90D88001A7E71 /* NTInputbarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTInputbarUITests.swift; sourceTree = "<group>"; };
+		64A30D381CA90D88001A7E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		64A30D101CA90D88001A7E71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64A30D241CA90D88001A7E71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64A30D2F1CA90D88001A7E71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		64A30D0A1CA90D88001A7E71 = {
+			isa = PBXGroup;
+			children = (
+				64A30D151CA90D88001A7E71 /* NTInputbar */,
+				64A30D2A1CA90D88001A7E71 /* NTInputbarTests */,
+				64A30D351CA90D88001A7E71 /* NTInputbarUITests */,
+				64A30D141CA90D88001A7E71 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		64A30D141CA90D88001A7E71 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64A30D131CA90D88001A7E71 /* NTInputbar.app */,
+				64A30D271CA90D88001A7E71 /* NTInputbarTests.xctest */,
+				64A30D321CA90D88001A7E71 /* NTInputbarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64A30D151CA90D88001A7E71 /* NTInputbar */ = {
+			isa = PBXGroup;
+			children = (
+				64A30D161CA90D88001A7E71 /* AppDelegate.swift */,
+				64A30D181CA90D88001A7E71 /* ViewController.swift */,
+				64A30D1A1CA90D88001A7E71 /* Main.storyboard */,
+				64A30D1D1CA90D88001A7E71 /* Assets.xcassets */,
+				64A30D1F1CA90D88001A7E71 /* LaunchScreen.storyboard */,
+				64A30D221CA90D88001A7E71 /* Info.plist */,
+			);
+			path = NTInputbar;
+			sourceTree = "<group>";
+		};
+		64A30D2A1CA90D88001A7E71 /* NTInputbarTests */ = {
+			isa = PBXGroup;
+			children = (
+				64A30D2B1CA90D88001A7E71 /* NTInputbarTests.swift */,
+				64A30D2D1CA90D88001A7E71 /* Info.plist */,
+			);
+			path = NTInputbarTests;
+			sourceTree = "<group>";
+		};
+		64A30D351CA90D88001A7E71 /* NTInputbarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				64A30D361CA90D88001A7E71 /* NTInputbarUITests.swift */,
+				64A30D381CA90D88001A7E71 /* Info.plist */,
+			);
+			path = NTInputbarUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		64A30D121CA90D88001A7E71 /* NTInputbar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64A30D3B1CA90D88001A7E71 /* Build configuration list for PBXNativeTarget "NTInputbar" */;
+			buildPhases = (
+				64A30D0F1CA90D88001A7E71 /* Sources */,
+				64A30D101CA90D88001A7E71 /* Frameworks */,
+				64A30D111CA90D88001A7E71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NTInputbar;
+			productName = NTInputbar;
+			productReference = 64A30D131CA90D88001A7E71 /* NTInputbar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		64A30D261CA90D88001A7E71 /* NTInputbarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64A30D3E1CA90D88001A7E71 /* Build configuration list for PBXNativeTarget "NTInputbarTests" */;
+			buildPhases = (
+				64A30D231CA90D88001A7E71 /* Sources */,
+				64A30D241CA90D88001A7E71 /* Frameworks */,
+				64A30D251CA90D88001A7E71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64A30D291CA90D88001A7E71 /* PBXTargetDependency */,
+			);
+			name = NTInputbarTests;
+			productName = NTInputbarTests;
+			productReference = 64A30D271CA90D88001A7E71 /* NTInputbarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		64A30D311CA90D88001A7E71 /* NTInputbarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64A30D411CA90D88001A7E71 /* Build configuration list for PBXNativeTarget "NTInputbarUITests" */;
+			buildPhases = (
+				64A30D2E1CA90D88001A7E71 /* Sources */,
+				64A30D2F1CA90D88001A7E71 /* Frameworks */,
+				64A30D301CA90D88001A7E71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64A30D341CA90D88001A7E71 /* PBXTargetDependency */,
+			);
+			name = NTInputbarUITests;
+			productName = NTInputbarUITests;
+			productReference = 64A30D321CA90D88001A7E71 /* NTInputbarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		64A30D0B1CA90D88001A7E71 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = JJ;
+				TargetAttributes = {
+					64A30D121CA90D88001A7E71 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					64A30D261CA90D88001A7E71 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 64A30D121CA90D88001A7E71;
+					};
+					64A30D311CA90D88001A7E71 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 64A30D121CA90D88001A7E71;
+					};
+				};
+			};
+			buildConfigurationList = 64A30D0E1CA90D88001A7E71 /* Build configuration list for PBXProject "NTInputbar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 64A30D0A1CA90D88001A7E71;
+			productRefGroup = 64A30D141CA90D88001A7E71 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				64A30D121CA90D88001A7E71 /* NTInputbar */,
+				64A30D261CA90D88001A7E71 /* NTInputbarTests */,
+				64A30D311CA90D88001A7E71 /* NTInputbarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		64A30D111CA90D88001A7E71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64A30D211CA90D88001A7E71 /* LaunchScreen.storyboard in Resources */,
+				64A30D1E1CA90D88001A7E71 /* Assets.xcassets in Resources */,
+				64A30D1C1CA90D88001A7E71 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64A30D251CA90D88001A7E71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64A30D301CA90D88001A7E71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		64A30D0F1CA90D88001A7E71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64A30D191CA90D88001A7E71 /* ViewController.swift in Sources */,
+				64A30D171CA90D88001A7E71 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64A30D231CA90D88001A7E71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64A30D2C1CA90D88001A7E71 /* NTInputbarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64A30D2E1CA90D88001A7E71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64A30D371CA90D88001A7E71 /* NTInputbarUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		64A30D291CA90D88001A7E71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64A30D121CA90D88001A7E71 /* NTInputbar */;
+			targetProxy = 64A30D281CA90D88001A7E71 /* PBXContainerItemProxy */;
+		};
+		64A30D341CA90D88001A7E71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64A30D121CA90D88001A7E71 /* NTInputbar */;
+			targetProxy = 64A30D331CA90D88001A7E71 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		64A30D1A1CA90D88001A7E71 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64A30D1B1CA90D88001A7E71 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		64A30D1F1CA90D88001A7E71 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64A30D201CA90D88001A7E71 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		64A30D391CA90D88001A7E71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		64A30D3A1CA90D88001A7E71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		64A30D3C1CA90D88001A7E71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NTInputbar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.demon.NTInputbar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		64A30D3D1CA90D88001A7E71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NTInputbar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.demon.NTInputbar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		64A30D3F1CA90D88001A7E71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NTInputbarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.demon.NTInputbarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NTInputbar.app/NTInputbar";
+			};
+			name = Debug;
+		};
+		64A30D401CA90D88001A7E71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NTInputbarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.demon.NTInputbarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NTInputbar.app/NTInputbar";
+			};
+			name = Release;
+		};
+		64A30D421CA90D88001A7E71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NTInputbarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.demon.NTInputbarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NTInputbar;
+			};
+			name = Debug;
+		};
+		64A30D431CA90D88001A7E71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NTInputbarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.demon.NTInputbarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NTInputbar;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		64A30D0E1CA90D88001A7E71 /* Build configuration list for PBXProject "NTInputbar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64A30D391CA90D88001A7E71 /* Debug */,
+				64A30D3A1CA90D88001A7E71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64A30D3B1CA90D88001A7E71 /* Build configuration list for PBXNativeTarget "NTInputbar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64A30D3C1CA90D88001A7E71 /* Debug */,
+				64A30D3D1CA90D88001A7E71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		64A30D3E1CA90D88001A7E71 /* Build configuration list for PBXNativeTarget "NTInputbarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64A30D3F1CA90D88001A7E71 /* Debug */,
+				64A30D401CA90D88001A7E71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		64A30D411CA90D88001A7E71 /* Build configuration list for PBXNativeTarget "NTInputbarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64A30D421CA90D88001A7E71 /* Debug */,
+				64A30D431CA90D88001A7E71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 64A30D0B1CA90D88001A7E71 /* Project object */;
+}
