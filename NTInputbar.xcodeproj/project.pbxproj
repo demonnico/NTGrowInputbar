@@ -14,6 +14,9 @@
 		64A30D211CA90D88001A7E71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A30D1F1CA90D88001A7E71 /* LaunchScreen.storyboard */; };
 		64A30D2C1CA90D88001A7E71 /* NTInputbarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A30D2B1CA90D88001A7E71 /* NTInputbarTests.swift */; };
 		64A30D371CA90D88001A7E71 /* NTInputbarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A30D361CA90D88001A7E71 /* NTInputbarUITests.swift */; };
+		64A30D451CA90DB0001A7E71 /* NTInputbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A30D441CA90DB0001A7E71 /* NTInputbar.swift */; };
+		64A30D471CA91AAE001A7E71 /* NTAtTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A30D461CA91AAE001A7E71 /* NTAtTextView.swift */; };
+		64A30D4C1CAA64E8001A7E71 /* NTResponseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A30D4B1CAA64E8001A7E71 /* NTResponseButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		64A30D321CA90D88001A7E71 /* NTInputbarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NTInputbarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A30D361CA90D88001A7E71 /* NTInputbarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTInputbarUITests.swift; sourceTree = "<group>"; };
 		64A30D381CA90D88001A7E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64A30D441CA90DB0001A7E71 /* NTInputbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTInputbar.swift; sourceTree = "<group>"; };
+		64A30D461CA91AAE001A7E71 /* NTAtTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAtTextView.swift; sourceTree = "<group>"; };
+		64A30D4B1CAA64E8001A7E71 /* NTResponseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTResponseButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 			children = (
 				64A30D161CA90D88001A7E71 /* AppDelegate.swift */,
 				64A30D181CA90D88001A7E71 /* ViewController.swift */,
+				64A30D441CA90DB0001A7E71 /* NTInputbar.swift */,
+				64A30D4B1CAA64E8001A7E71 /* NTResponseButton.swift */,
+				64A30D461CA91AAE001A7E71 /* NTAtTextView.swift */,
 				64A30D1A1CA90D88001A7E71 /* Main.storyboard */,
 				64A30D1D1CA90D88001A7E71 /* Assets.xcassets */,
 				64A30D1F1CA90D88001A7E71 /* LaunchScreen.storyboard */,
@@ -256,7 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64A30D4C1CAA64E8001A7E71 /* NTResponseButton.swift in Sources */,
+				64A30D471CA91AAE001A7E71 /* NTAtTextView.swift in Sources */,
 				64A30D191CA90D88001A7E71 /* ViewController.swift in Sources */,
+				64A30D451CA90DB0001A7E71 /* NTInputbar.swift in Sources */,
 				64A30D171CA90D88001A7E71 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
