@@ -9,8 +9,8 @@
 import UIKit
 
 //#http://stackoverflow.com/questions/26083377/swift-setting-an-optional-property-of-a-protocol
-//workaround
-protocol NTTextInputTraits : UITextInputTraits{
+//workaround here
+@objc protocol NTTextInputTraits : UITextInputTraits{
     var returnKeyType: UIReturnKeyType{get set}
     var enablesReturnKeyAutomatically: Bool{get set}
 }

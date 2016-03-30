@@ -14,16 +14,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let textView = NTAtTextView.init(frame: CGRectMake(0, 0, 300, 300), textContainer: nil)
-        self.view.addSubview(textView)
-        textView.placeHolderColor = UIColor.redColor()
-        textView.placeHolderString = "please input some tet here"
-        textView.layer.borderColor = UIColor.lightGrayColor().CGColor
-        textView.backgroundColor = UIColor.yellowColor()
-        textView.layer.cornerRadius = 3.0
-        textView.atMentonTrigger = {
-            textView.insertMetionedMemberName("JoJo")
+        let inputBar = NTInputbar.init(frame: CGRectMake(0, 100, 300, 40))
+        self.view.addSubview(inputBar)
+        inputBar.textView.placeHolderColor = UIColor.redColor()
+        inputBar.textView.placeHolderString = "please input some tet here"
+        inputBar.textView.layer.borderColor = UIColor.lightGrayColor().CGColor
+        inputBar.textView.backgroundColor = UIColor.yellowColor()
+        inputBar.textView.layer.cornerRadius = 3.0
+        inputBar.textView.atMentonTrigger = {
+            inputBar.textView.insertMetionedMemberName("JoJo")
         }
+        
+        let leftButton = NTResponseButton.init(frame: CGRectMake(0, 0, 44, 44))
+        leftButton.setTitle("voice", forState: .Normal)
+        inputBar.buttonLeft = leftButton
     }
 
     override func didReceiveMemoryWarning() {

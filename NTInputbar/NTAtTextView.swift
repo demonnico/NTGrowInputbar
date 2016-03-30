@@ -41,7 +41,7 @@ class NTAtTextView: UITextView {
     }
     
     override func deleteBackward() {
-        if self.text.hasSuffix("\0") {
+        if self.text.hasSuffix("\0") && self.atMentonTrigger != nil {
             deleteModuleTrigger()
         }else{
             super.deleteBackward()
@@ -50,10 +50,8 @@ class NTAtTextView: UITextView {
     }
     
     override func insertText(text: String) {
-        if text == "@" {
-            if self.atMentonTrigger != nil {
-                self.atMentonTrigger();
-            }
+        if text == "@" && self.atMentonTrigger != nil{
+            self.atMentonTrigger();
         }else{
             super.insertText(text)
         }
@@ -85,10 +83,6 @@ class NTAtTextView: UITextView {
         if atMentonTrigger != nil {
             atMentonTrigger()
         }
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
     }
     
     // Only override drawRect: if you perform custom drawing.
