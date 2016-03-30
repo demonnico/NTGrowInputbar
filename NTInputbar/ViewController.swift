@@ -19,9 +19,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var inputBarIB: NTInputbar!
+    
+    override var inputAccessoryView: UIView?{
+        get{
+            return self.inputBarIB
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.textView.keyboardDismissMode = .Interactive
         
         let inputBar = self.inputBarIB //NTInputbar.init(frame: CGRectMake(0, 100, 300, 40))
         inputBar.textView.placeHolderColor = UIColor.redColor()
@@ -35,6 +43,7 @@ class ViewController: UIViewController {
         }
         inputBar.inputbarHeightChanged = {height in
             self.bottomConstraint.constant = height
+            inputBar.frame.origin.y = self.textView.frame.height+20
         }
         
         let leftButton = NTResponseButton.init(frame: CGRectMake(0, 0, 44, 20))
@@ -52,7 +61,6 @@ class ViewController: UIViewController {
         inputBar.buttonRight = rightButton
         
     }
-
     
     func leftButtonTapped(sender: UIButton) {
         

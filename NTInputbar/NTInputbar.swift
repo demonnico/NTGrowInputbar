@@ -18,8 +18,13 @@ class NTInputbar: UIView {
     let kMarginTextViewBottom :CGFloat = 5.0
     let kMarginTextViewTop :CGFloat = 5.0
     let textView = NTAtTextView.init(frame: CGRectZero, textContainer: nil)
+    private var inputbarBottomHeight :CGFloat = 0.0
     var numberOfLines :Int = 4
-    var inputbarHeightChanged :(CGFloat -> Void)?
+    var inputbarHeightChanged :(CGFloat -> Void)?{
+        didSet{
+            
+        }
+    }
     var attachedScrollView :UIScrollView?
     var buttonLeft: NTResponseButton?{
         willSet{
@@ -58,6 +63,14 @@ class NTInputbar: UIView {
         layer.borderColor = UIColor.init(red: 217/255.0, green: 207/255.0, blue: 255.0, alpha: 1.0).CGColor
         layer.backgroundColor = UIColor.init(white: 248/255.0, alpha: 1.0).CGColor
         
+        let accessoryView = BABFrameObservingInputAccessoryView.init(frame: CGRectZero)
+        textView.inputAccessoryView = accessoryView
+        accessoryView.inputAccessoryViewFramwChanged = {frame in
+            self.inputbarBottomHeight = (self.superview?.frame.size.height)!-CGRectGetMinY(frame) - CGRectGetHeight((self.textView.inputAccessoryView?.frame)!)
+            if self.inputbarHeightChanged != nil {
+                self.inputbarHeightChanged!(self.frame.height + self.inputbarBottomHeight)
+            }
+        }
         addSubview(textView)
         NSNotificationCenter.defaultCenter().addObserver(self,
                                                          selector: #selector(textViewTextChanged),
@@ -123,7 +136,7 @@ class NTInputbar: UIView {
             self.textView.scrollRectToVisible(rect, animated: false)
         }
         if inputbarHeightChanged != nil {
-            inputbarHeightChanged!(CGFloat(newHeight))
+            inputbarHeightChanged!(CGFloat(newHeight+inputbarBottomHeight))
             attachedScrollView?.scrollToBottom()
         }
     }
