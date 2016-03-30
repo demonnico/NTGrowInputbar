@@ -81,6 +81,10 @@ class NTResponseButton: UIButton, UIKeyInput, UITextInputTraits {
         
     }
     
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
     }
