@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		640A29391CAB76940010463F /* NTInputbarPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640A29381CAB76940010463F /* NTInputbarPanel.swift */; };
 		64A30D171CA90D88001A7E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A30D161CA90D88001A7E71 /* AppDelegate.swift */; };
 		64A30D191CA90D88001A7E71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A30D181CA90D88001A7E71 /* ViewController.swift */; };
 		64A30D1C1CA90D88001A7E71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A30D1A1CA90D88001A7E71 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		640A29381CAB76940010463F /* NTInputbarPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTInputbarPanel.swift; sourceTree = "<group>"; };
 		64A30D131CA90D88001A7E71 /* NTInputbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NTInputbar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A30D161CA90D88001A7E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64A30D181CA90D88001A7E71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				64A30D181CA90D88001A7E71 /* ViewController.swift */,
 				64A30D441CA90DB0001A7E71 /* NTInputbar.swift */,
 				64A30D4B1CAA64E8001A7E71 /* NTResponseButton.swift */,
+				640A29381CAB76940010463F /* NTInputbarPanel.swift */,
 				64A30D461CA91AAE001A7E71 /* NTAtTextView.swift */,
 				64A30D1A1CA90D88001A7E71 /* Main.storyboard */,
 				64A30D1D1CA90D88001A7E71 /* Assets.xcassets */,
@@ -268,6 +271,7 @@
 				64A30D4C1CAA64E8001A7E71 /* NTResponseButton.swift in Sources */,
 				64A30D471CA91AAE001A7E71 /* NTAtTextView.swift in Sources */,
 				64A30D191CA90D88001A7E71 /* ViewController.swift in Sources */,
+				640A29391CAB76940010463F /* NTInputbarPanel.swift in Sources */,
 				64A30D451CA90DB0001A7E71 /* NTInputbar.swift in Sources */,
 				64A30D171CA90D88001A7E71 /* AppDelegate.swift in Sources */,
 			);
@@ -494,6 +498,7 @@
 				64A30D3D1CA90D88001A7E71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		64A30D3E1CA90D88001A7E71 /* Build configuration list for PBXNativeTarget "NTInputbarTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +507,7 @@
 				64A30D401CA90D88001A7E71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		64A30D411CA90D88001A7E71 /* Build configuration list for PBXNativeTarget "NTInputbarUITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +516,7 @@
 				64A30D431CA90D88001A7E71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
