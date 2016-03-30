@@ -13,12 +13,15 @@ import UIKit
 @objc protocol NTTextInputTraits : UITextInputTraits{
     var returnKeyType: UIReturnKeyType{get set}
     var enablesReturnKeyAutomatically: Bool{get set}
+//    var inputView: UIView? {get set}
+//    var inputAccessoryView: UIView{get set}
 }
-
-class NTResponseButton: UIButton, UIKeyInput, NTTextInputTraits {
+class NTResponseButton: UIButton, UIKeyInput, UITextInputTraits {
     
-    var realTurnKeyType: UIReturnKeyType! = .Send
-    var realEnablesReturnKeyAutomatically: Bool = true
+    private var realTurnKeyType: UIReturnKeyType! = .Send
+    private var realEnablesReturnKeyAutomatically: Bool = true
+    private var responseInputView: UIView!
+    private var responseInputAccessoryView: UIView!
     
     var returnKeyType: UIReturnKeyType{
         get{
@@ -36,16 +39,34 @@ class NTResponseButton: UIButton, UIKeyInput, NTTextInputTraits {
         }
     }
     
+    override var inputView: UIView?{
+        get{
+            return responseInputView
+        }set{
+            responseInputView = newValue
+        }
+    }
+    
+    override var inputAccessoryView: UIView?{
+        get{
+            return responseInputAccessoryView
+        }set{
+            responseInputAccessoryView = newValue
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        commitInit()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        commitInit()
     }
     
     func commitInit() {
-        
+        userInteractionEnabled = true
     }
     
     func hasText() -> Bool {
@@ -63,7 +84,7 @@ class NTResponseButton: UIButton, UIKeyInput, NTTextInputTraits {
     override func layoutSubviews() {
         super.layoutSubviews()
     }
-    
+
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

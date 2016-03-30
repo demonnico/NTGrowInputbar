@@ -31,13 +31,14 @@ class NTAtTextView: UITextView {
     }
     
     private func commitInit(){
-        font = UIFont.systemFontOfSize(12)
+        font = UIFont.systemFontOfSize(14)
         textColor = UIColor.blackColor()
         returnKeyType = .Send
         enablesReturnKeyAutomatically = true
         layer.borderColor = UIColor.blackColor().CGColor
         layer.borderWidth = 0.5
         layer.masksToBounds = true
+        scrollEnabled = false
     }
     
     override func deleteBackward() {
@@ -104,6 +105,4 @@ class NTAtTextView: UITextView {
                 NSForegroundColorAttributeName:placeHolderColor ?? self.textColor!,
                 NSParagraphStyleAttributeName:paragraphStyle]
     }
-    
-
 }
