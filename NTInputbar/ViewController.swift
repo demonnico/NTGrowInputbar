@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         }
         inputBar.inputbarHeightChanged = {height in
             self.bottomConstraint.constant = height
-            inputBar.frame.origin.y = self.textView.frame.height+20
+            inputBar.frame.origin.y = self.textView.frame.height+20//status bar height is 20
         }
         
         let leftButton = NTResponseButton.init(frame: CGRectMake(0, 0, 44, 20))
