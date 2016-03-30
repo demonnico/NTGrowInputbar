@@ -4,6 +4,8 @@
 //
 //  Created by Nicholas Tau on 3/30/16.
 //  Copyright © 2016 JJ. All rights reserved.
+//  https://github.com/brynbodayle/BABFrameObservingInputAccessoryView
+//  rewrited in swift
 //
 
 import UIKit
