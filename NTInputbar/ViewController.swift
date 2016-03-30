@@ -46,24 +46,35 @@ class ViewController: UIViewController {
             inputBar.frame.origin.y = self.textView.frame.height+20//status bar height is 20
         }
         
-        let leftButton = NTResponseButton.init(frame: CGRectMake(0, 0, 44, 20))
+        let leftButton = NTResponseButton.init(frame: CGRectMake(0, 0, 44, 44))
         leftButton.setTitle("voice", forState: .Normal)
         leftButton.setTitleColor(UIColor.redColor(), forState: .Normal)
         leftButton.backgroundColor =  UIColor.lightGrayColor()
-        leftButton.inputAccessoryView = UIView.init(frame: CGRectMake(0, 0, self.view.bounds.width, 200))
+        leftButton.inputView = UIView.init(frame: CGRectMake(0, 0, self.view.bounds.width, 300))
         leftButton.addTarget(self, action: #selector(leftButtonTapped), forControlEvents:.TouchUpOutside)
+        leftButton.enabled = true
         inputBar.buttonLeft = leftButton
+    
         
-        let rightButton = NTResponseButton.init(frame: CGRectMake(0, 0, 44, 20))
+        let rightButton = NTResponseButton.init(frame: CGRectMake(0, 0, 44, 44))
         rightButton.setTitle("Ex", forState: .Normal)
         rightButton.setTitleColor(leftButton.titleColorForState(.Normal), forState: .Normal)
         rightButton.backgroundColor = leftButton.backgroundColor
+        rightButton.addTarget(self, action: #selector(leftButtonTapped), forControlEvents: .TouchUpInside)
+        rightButton.inputView = UIView.init(frame: CGRectMake(0, 0, self.view.bounds.width, 200))
+        rightButton.inputView?.backgroundColor = UIColor.redColor()
         inputBar.buttonRight = rightButton
+        
+//        let button = UIButton.init(frame: CGRectMake(0, 0, 100, 100))
+//        button.backgroundColor = UIColor.redColor()
+//        button.addTarget(self, action:#selector(leftButtonTapped) , forControlEvents: .TouchUpInside)
+//        self.textView.addSubview(button)
         
     }
     
     func leftButtonTapped(sender: UIButton) {
-        
+        sender.becomeFirstResponder()
+        inputBarIB.setNeedsLayout()
     }
     
     override func didReceiveMemoryWarning() {
