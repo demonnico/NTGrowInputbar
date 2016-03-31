@@ -11,7 +11,7 @@
 import UIKit
 
 class BABFrameObservingInputAccessoryView: UIView {
-    var inputAccessoryViewFramwChanged :(CGRect -> Void)?
+    var inputAccessoryViewFrameChanged :(CGRect -> Void)?
     var observerAdded = false
     let BABFrameObservingContext: UnsafeMutablePointer<Void> = nil
     
@@ -53,16 +53,16 @@ class BABFrameObservingInputAccessoryView: UIView {
     
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         if object as? UIView == self.superview && (keyPath == "frame" || keyPath == "center"){
-            if self.inputAccessoryViewFramwChanged != nil {
-                self.inputAccessoryViewFramwChanged?((self.superview?.frame)!)
+            if self.inputAccessoryViewFrameChanged != nil {
+                self.inputAccessoryViewFrameChanged?((self.superview?.frame)!)
             }
         }
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        if self.inputAccessoryViewFramwChanged != nil {
-            self.inputAccessoryViewFramwChanged?((self.superview?.frame)!)
+        if self.inputAccessoryViewFrameChanged != nil {
+            self.inputAccessoryViewFrameChanged?((self.superview?.frame)!)
         }
     }
 }
