@@ -101,6 +101,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 100
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return CGFloat(arc4random()%100 + 100)
+    }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.inputTrigger.showInputbarInTableview(tableView, indexPath: indexPath)
     }
