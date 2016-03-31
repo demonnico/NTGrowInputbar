@@ -28,7 +28,7 @@ extension UIView {
     }
 }
 
-class NTInputbar: UIView {
+class NTGrowInputbar: UIView {
     
     let kMarginBetweenWidgets :CGFloat = 5.0
     let kMarginTextViewBottom :CGFloat = 5.0
@@ -38,15 +38,6 @@ class NTInputbar: UIView {
     var inputbarHeightChanged :(CGFloat -> Void)?{
         didSet{
             
-        }
-    }
-    
-    override var frame: CGRect{
-        willSet{
-            if newValue.origin.y == 623 || newValue.origin.y == 613 {
-                print("issue new value founded:", NSStringFromCGRect(newValue));
-            }
-            print("will set frame as:", NSStringFromCGRect(newValue))
         }
     }
     
