@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         self.textView.keyboardDismissMode = .Interactive
         
         let inputBar = self.inputBarIB //NTInputbar.init(frame: CGRectMake(0, 100, 300, 40))
+        
         inputBar.textView.placeHolderColor = UIColor.redColor()
         inputBar.textView.placeHolderString = "please input some tet here"
         inputBar.textView.layer.borderColor = UIColor.lightGrayColor().CGColor
@@ -50,7 +51,8 @@ class ViewController: UIViewController {
         leftButton.setTitle("voice", forState: .Normal)
         leftButton.setTitleColor(UIColor.redColor(), forState: .Normal)
         leftButton.backgroundColor =  UIColor.lightGrayColor()
-        leftButton.inputView = UIView.init(frame: CGRectMake(0, 0, self.view.bounds.width, 300))
+        leftButton.inputView = UIView.init(frame: CGRectMake(0, 0, self.view.bounds.width, 100))
+        leftButton.inputView?.backgroundColor = UIColor.orangeColor()
         leftButton.addTarget(self, action: #selector(leftButtonTapped), forControlEvents:.TouchUpOutside)
         leftButton.enabled = true
         inputBar.buttonLeft = leftButton
@@ -65,16 +67,11 @@ class ViewController: UIViewController {
         rightButton.inputView?.backgroundColor = UIColor.redColor()
         inputBar.buttonRight = rightButton
         
-//        let button = UIButton.init(frame: CGRectMake(0, 0, 100, 100))
-//        button.backgroundColor = UIColor.redColor()
-//        button.addTarget(self, action:#selector(leftButtonTapped) , forControlEvents: .TouchUpInside)
-//        self.textView.addSubview(button)
         
     }
     
     func leftButtonTapped(sender: UIButton) {
-        sender.becomeFirstResponder()
-        inputBarIB.setNeedsLayout()
+        
     }
     
     override func didReceiveMemoryWarning() {

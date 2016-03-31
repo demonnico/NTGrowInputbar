@@ -16,6 +16,7 @@ class NTAtTextView: UITextView {
     var placeHolderString: String? = "text..."
     //if @ typed, event been trigger
     var atMentonTrigger: ((Void) -> (Void))!
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commitInit()
@@ -59,6 +60,7 @@ class NTAtTextView: UITextView {
         self.setNeedsDisplay()
     }
     
+    
     func deleteModuleTrigger() {
         let textNS = self.text as NSString
         let range = textNS.rangeOfString("@",
@@ -91,7 +93,7 @@ class NTAtTextView: UITextView {
     override func drawRect(rect: CGRect) {
         // Drawing code
         super.drawRect(rect)
-        if (self.text.isEmpty) {
+        if self.text.characters.count==0 && placeHolderString != nil{
             let drawString = NSString.init(string: placeHolderString!)
             drawString.drawInRect(CGRectInset(rect, 7.0, 5.0), withAttributes: placeHolderAttributes())
         }

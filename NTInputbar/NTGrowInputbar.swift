@@ -12,19 +12,44 @@ protocol InputbarAttachedScrollViewProtocol {
     func scrollToBottom()
 }
 
+extension UIView {
+    func findFirstResponder() -> UIView? {
+        if self.isFirstResponder() {
+            return self
+        }else{
+            for subview in subviews {
+                let firstResponder = subview.findFirstResponder()
+                if firstResponder != nil {
+                    return firstResponder
+                }
+            }
+        }
+        return nil
+    }
+}
+
 class NTInputbar: UIView {
     
     let kMarginBetweenWidgets :CGFloat = 5.0
     let kMarginTextViewBottom :CGFloat = 5.0
     let kMarginTextViewTop :CGFloat = 5.0
     let textView = NTAtTextView.init(frame: CGRectZero, textContainer: nil)
-    private var inputbarBottomHeight :CGFloat = 0.0
     var numberOfLines :Int = 4
     var inputbarHeightChanged :(CGFloat -> Void)?{
         didSet{
             
         }
     }
+    
+    override var frame: CGRect{
+        willSet{
+            if newValue.origin.y == 623 || newValue.origin.y == 613 {
+                print("issue new value founded:", NSStringFromCGRect(newValue));
+            }
+            print("will set frame as:", NSStringFromCGRect(newValue))
+        }
+    }
+    
     var attachedScrollView :UIScrollView?
     var buttonLeft: NTResponseButton?{
         willSet{
@@ -65,10 +90,9 @@ class NTInputbar: UIView {
         
         let accessoryView = BABFrameObservingInputAccessoryView.init(frame: CGRectZero)
         textView.inputAccessoryView = accessoryView
-        accessoryView.inputAccessoryViewFramwChanged = {frame in
-            self.inputbarBottomHeight = (self.superview?.frame.size.height)!-CGRectGetMinY(frame) - CGRectGetHeight((self.textView.inputAccessoryView?.frame)!)
+        accessoryView.inputAccessoryViewFrameChanged = {frame in
             if self.inputbarHeightChanged != nil {
-                self.inputbarHeightChanged!(self.frame.height + self.inputbarBottomHeight)
+                self.inputbarHeightChanged!(self.frame.height + self.firstResponderInputViewAreaHeight())
             }
         }
         addSubview(textView)
@@ -76,12 +100,34 @@ class NTInputbar: UIView {
                                                          selector: #selector(textViewTextChanged),
                                                          name: UITextViewTextDidChangeNotification,
                                                          object: textView)
+        NSNotificationCenter.defaultCenter().addObserver(self,
+                                                         selector: #selector(textViewDidBeginEditing),
+                                                         name: UITextViewTextDidBeginEditingNotification,
+                                                         object: textView)
     }
     
-    func textViewTextChanged(notification :NSNotification)  {
+    func firstResponderInputViewAreaHeight() -> CGFloat {
+        let firstResponder = findFirstResponder()
+        if firstResponder != nil {
+            let accessoryView = firstResponder?.inputAccessoryView as! BABFrameObservingInputAccessoryView
+            return (self.superview?.frame.size.height)!-CGRectGetMinY((accessoryView.superview?.frame)!) - CGRectGetHeight((accessoryView.frame))
+        }else{
+            return 0.0
+        }
+    }
+    
+    func textViewTextChanged(notification :NSNotification) {
         if let object = notification.object {
             if object as! UITextView == textView {
-                self.setNeedsLayout()
+                textView.setNeedsLayout()
+            }
+        }
+    }
+    
+    func textViewDidBeginEditing(notification :NSNotification) {
+        if let objet = notification.object {
+            if objet as! UITextView == textView {
+                attachedScrollView?.scrollToBottom()
             }
         }
     }
@@ -106,35 +152,25 @@ class NTInputbar: UIView {
         var textViewX = kMarginBetweenWidgets
         let textViewY = kMarginTextViewTop
         var textViewWidth = frame.size.width - kMarginBetweenWidgets - kMarginBetweenWidgets
+        
+        //if left button exist, update frame
         if let leftOne = buttonLeft {
-            leftOne.userInteractionEnabled = true
+            leftOne.removeTarget(nil, action: #selector(extentionButtonTapped), forControlEvents: .TouchUpInside)
+            leftOne.addTarget(self, action: #selector(extentionButtonTapped), forControlEvents: .TouchUpInside)
             textViewX = leftOne.frame.maxX+kMarginBetweenWidgets
             textViewWidth = textViewWidth - leftOne.frame.size.width - kMarginBetweenWidgets
             newHeight = max(newHeight, leftOne.frame.height + kMarginTextViewTop + kMarginTextViewBottom)
-            if leftOne.isFirstResponder() {
-                inputbarBottomHeight = (leftOne.inputView?.frame.size.height)!
-                if leftOne.inputAccessoryView == nil {                    
-                    let accessoryView = BABFrameObservingInputAccessoryView.init(frame: CGRectZero)
-                    leftOne.inputAccessoryView = accessoryView
-                    accessoryView.inputAccessoryViewFramwChanged = (textView.inputAccessoryView as! BABFrameObservingInputAccessoryView).inputAccessoryViewFramwChanged
-                }
-            }
         }
+        //if right button exist, update frame
         if let rightOne = buttonRight {
-            rightOne.userInteractionEnabled = true
+            rightOne.removeTarget(nil, action: #selector(extentionButtonTapped), forControlEvents: .TouchUpInside)
+            rightOne.addTarget(self, action: #selector(extentionButtonTapped), forControlEvents: .TouchUpInside)
             textViewWidth = textViewWidth - rightOne.frame.size.width - kMarginBetweenWidgets
             newHeight = max(newHeight, rightOne.frame.height + kMarginTextViewTop + kMarginTextViewBottom)
-            if rightOne.isFirstResponder() {
-                inputbarBottomHeight = (rightOne.inputView?.frame.size.height)!
-                if rightOne.inputAccessoryView == nil {
-                    let accessoryView = BABFrameObservingInputAccessoryView.init(frame: CGRectZero)
-                    rightOne.inputAccessoryView = accessoryView
-                    accessoryView.inputAccessoryViewFramwChanged = (textView.inputAccessoryView as! BABFrameObservingInputAccessoryView).inputAccessoryViewFramwChanged
-                }
-            }
         }
         
         let bottom = frame.maxY;
+        //update inputbar's height
         frame.size.height = CGFloat(newHeight)
         //keep bottom on the same position
         frame.origin.y = bottom - newHeight;
@@ -151,9 +187,20 @@ class NTInputbar: UIView {
             let rect = textView.caretRectForPosition(s.end)
             self.textView.scrollRectToVisible(rect, animated: false)
         }
-        if inputbarHeightChanged != nil {
-            inputbarHeightChanged!(CGFloat(newHeight+inputbarBottomHeight))
-            attachedScrollView?.scrollToBottom()
+        if inputbarHeightChanged != nil{
+            inputbarHeightChanged!(CGFloat(newHeight+self.firstResponderInputViewAreaHeight()))
         }
+    }
+    
+    func extentionButtonTapped(sender :NTResponseButton) {
+        if sender.inputAccessoryView == nil {
+            let accessoryView = BABFrameObservingInputAccessoryView.init(frame: CGRectZero)
+            sender.inputAccessoryView = accessoryView
+            let textViewAccessoryView = textView.inputAccessoryView as! BABFrameObservingInputAccessoryView
+            accessoryView.inputAccessoryViewFrameChanged = textViewAccessoryView.inputAccessoryViewFrameChanged
+        }
+        sender.becomeFirstResponder()
+        setNeedsLayout()
+        attachedScrollView?.scrollToBottom()
     }
 }
