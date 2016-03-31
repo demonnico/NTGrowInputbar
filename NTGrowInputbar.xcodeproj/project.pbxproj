@@ -16,7 +16,7 @@
 		64A30D211CA90D88001A7E71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A30D1F1CA90D88001A7E71 /* LaunchScreen.storyboard */; };
 		64A30D2C1CA90D88001A7E71 /* NTInputbarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A30D2B1CA90D88001A7E71 /* NTInputbarTests.swift */; };
 		64A30D371CA90D88001A7E71 /* NTInputbarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A30D361CA90D88001A7E71 /* NTInputbarUITests.swift */; };
-		64A30D451CA90DB0001A7E71 /* NTInputbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A30D441CA90DB0001A7E71 /* NTInputbar.swift */; };
+		64A30D451CA90DB0001A7E71 /* NTGrowInputbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A30D441CA90DB0001A7E71 /* NTGrowInputbar.swift */; };
 		64A30D471CA91AAE001A7E71 /* NTAtTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A30D461CA91AAE001A7E71 /* NTAtTextView.swift */; };
 		64A30D4C1CAA64E8001A7E71 /* NTResponseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A30D4B1CAA64E8001A7E71 /* NTResponseButton.swift */; };
 /* End PBXBuildFile section */
@@ -41,20 +41,20 @@
 /* Begin PBXFileReference section */
 		640A29381CAB76940010463F /* NTInputbarPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTInputbarPanel.swift; sourceTree = "<group>"; };
 		6465D8431CABDFB300264B25 /* BABFrameObservingInputAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BABFrameObservingInputAccessoryView.swift; sourceTree = "<group>"; };
-		64A30D131CA90D88001A7E71 /* NTInputbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NTInputbar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64A30D131CA90D88001A7E71 /* NTGrowInputbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NTGrowInputbar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A30D161CA90D88001A7E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64A30D181CA90D88001A7E71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		64A30D1B1CA90D88001A7E71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		64A30D1D1CA90D88001A7E71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64A30D201CA90D88001A7E71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64A30D221CA90D88001A7E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		64A30D271CA90D88001A7E71 /* NTInputbarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NTInputbarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		64A30D271CA90D88001A7E71 /* NTGrowInputbar.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NTGrowInputbar.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A30D2B1CA90D88001A7E71 /* NTInputbarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTInputbarTests.swift; sourceTree = "<group>"; };
 		64A30D2D1CA90D88001A7E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		64A30D321CA90D88001A7E71 /* NTInputbarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NTInputbarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		64A30D321CA90D88001A7E71 /* NTGrowInputbar.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NTGrowInputbar.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A30D361CA90D88001A7E71 /* NTInputbarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTInputbarUITests.swift; sourceTree = "<group>"; };
 		64A30D381CA90D88001A7E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		64A30D441CA90DB0001A7E71 /* NTInputbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTInputbar.swift; sourceTree = "<group>"; };
+		64A30D441CA90DB0001A7E71 /* NTGrowInputbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTGrowInputbar.swift; sourceTree = "<group>"; };
 		64A30D461CA91AAE001A7E71 /* NTAtTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAtTextView.swift; sourceTree = "<group>"; };
 		64A30D4B1CAA64E8001A7E71 /* NTResponseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTResponseButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,7 +87,7 @@
 		64A30D0A1CA90D88001A7E71 = {
 			isa = PBXGroup;
 			children = (
-				64A30D151CA90D88001A7E71 /* NTInputbar */,
+				64A30D151CA90D88001A7E71 /* NTGrowInputbar */,
 				64A30D2A1CA90D88001A7E71 /* NTInputbarTests */,
 				64A30D351CA90D88001A7E71 /* NTInputbarUITests */,
 				64A30D141CA90D88001A7E71 /* Products */,
@@ -97,19 +97,19 @@
 		64A30D141CA90D88001A7E71 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				64A30D131CA90D88001A7E71 /* NTInputbar.app */,
-				64A30D271CA90D88001A7E71 /* NTInputbarTests.xctest */,
-				64A30D321CA90D88001A7E71 /* NTInputbarUITests.xctest */,
+				64A30D131CA90D88001A7E71 /* NTGrowInputbar.app */,
+				64A30D271CA90D88001A7E71 /* NTGrowInputbar.xctest */,
+				64A30D321CA90D88001A7E71 /* NTGrowInputbar.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		64A30D151CA90D88001A7E71 /* NTInputbar */ = {
+		64A30D151CA90D88001A7E71 /* NTGrowInputbar */ = {
 			isa = PBXGroup;
 			children = (
 				64A30D161CA90D88001A7E71 /* AppDelegate.swift */,
 				64A30D181CA90D88001A7E71 /* ViewController.swift */,
-				64A30D441CA90DB0001A7E71 /* NTInputbar.swift */,
+				64A30D441CA90DB0001A7E71 /* NTGrowInputbar.swift */,
 				6465D8431CABDFB300264B25 /* BABFrameObservingInputAccessoryView.swift */,
 				64A30D4B1CAA64E8001A7E71 /* NTResponseButton.swift */,
 				640A29381CAB76940010463F /* NTInputbarPanel.swift */,
@@ -119,6 +119,7 @@
 				64A30D1F1CA90D88001A7E71 /* LaunchScreen.storyboard */,
 				64A30D221CA90D88001A7E71 /* Info.plist */,
 			);
+			name = NTGrowInputbar;
 			path = NTInputbar;
 			sourceTree = "<group>";
 		};
@@ -143,9 +144,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		64A30D121CA90D88001A7E71 /* NTInputbar */ = {
+		64A30D121CA90D88001A7E71 /* NTGrowInputbar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 64A30D3B1CA90D88001A7E71 /* Build configuration list for PBXNativeTarget "NTInputbar" */;
+			buildConfigurationList = 64A30D3B1CA90D88001A7E71 /* Build configuration list for PBXNativeTarget "NTGrowInputbar" */;
 			buildPhases = (
 				64A30D0F1CA90D88001A7E71 /* Sources */,
 				64A30D101CA90D88001A7E71 /* Frameworks */,
@@ -155,14 +156,14 @@
 			);
 			dependencies = (
 			);
-			name = NTInputbar;
+			name = NTGrowInputbar;
 			productName = NTInputbar;
-			productReference = 64A30D131CA90D88001A7E71 /* NTInputbar.app */;
+			productReference = 64A30D131CA90D88001A7E71 /* NTGrowInputbar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		64A30D261CA90D88001A7E71 /* NTInputbarTests */ = {
+		64A30D261CA90D88001A7E71 /* NTGrowInputbarTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 64A30D3E1CA90D88001A7E71 /* Build configuration list for PBXNativeTarget "NTInputbarTests" */;
+			buildConfigurationList = 64A30D3E1CA90D88001A7E71 /* Build configuration list for PBXNativeTarget "NTGrowInputbarTests" */;
 			buildPhases = (
 				64A30D231CA90D88001A7E71 /* Sources */,
 				64A30D241CA90D88001A7E71 /* Frameworks */,
@@ -173,14 +174,14 @@
 			dependencies = (
 				64A30D291CA90D88001A7E71 /* PBXTargetDependency */,
 			);
-			name = NTInputbarTests;
+			name = NTGrowInputbarTests;
 			productName = NTInputbarTests;
-			productReference = 64A30D271CA90D88001A7E71 /* NTInputbarTests.xctest */;
+			productReference = 64A30D271CA90D88001A7E71 /* NTGrowInputbar.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		64A30D311CA90D88001A7E71 /* NTInputbarUITests */ = {
+		64A30D311CA90D88001A7E71 /* NTGrowInputbarUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 64A30D411CA90D88001A7E71 /* Build configuration list for PBXNativeTarget "NTInputbarUITests" */;
+			buildConfigurationList = 64A30D411CA90D88001A7E71 /* Build configuration list for PBXNativeTarget "NTGrowInputbarUITests" */;
 			buildPhases = (
 				64A30D2E1CA90D88001A7E71 /* Sources */,
 				64A30D2F1CA90D88001A7E71 /* Frameworks */,
@@ -191,9 +192,9 @@
 			dependencies = (
 				64A30D341CA90D88001A7E71 /* PBXTargetDependency */,
 			);
-			name = NTInputbarUITests;
+			name = NTGrowInputbarUITests;
 			productName = NTInputbarUITests;
-			productReference = 64A30D321CA90D88001A7E71 /* NTInputbarUITests.xctest */;
+			productReference = 64A30D321CA90D88001A7E71 /* NTGrowInputbar.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -219,7 +220,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 64A30D0E1CA90D88001A7E71 /* Build configuration list for PBXProject "NTInputbar" */;
+			buildConfigurationList = 64A30D0E1CA90D88001A7E71 /* Build configuration list for PBXProject "NTGrowInputbar" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -232,9 +233,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				64A30D121CA90D88001A7E71 /* NTInputbar */,
-				64A30D261CA90D88001A7E71 /* NTInputbarTests */,
-				64A30D311CA90D88001A7E71 /* NTInputbarUITests */,
+				64A30D121CA90D88001A7E71 /* NTGrowInputbar */,
+				64A30D261CA90D88001A7E71 /* NTGrowInputbarTests */,
+				64A30D311CA90D88001A7E71 /* NTGrowInputbarUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -276,7 +277,7 @@
 				64A30D191CA90D88001A7E71 /* ViewController.swift in Sources */,
 				640A29391CAB76940010463F /* NTInputbarPanel.swift in Sources */,
 				6465D8441CABDFB300264B25 /* BABFrameObservingInputAccessoryView.swift in Sources */,
-				64A30D451CA90DB0001A7E71 /* NTInputbar.swift in Sources */,
+				64A30D451CA90DB0001A7E71 /* NTGrowInputbar.swift in Sources */,
 				64A30D171CA90D88001A7E71 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,12 +303,12 @@
 /* Begin PBXTargetDependency section */
 		64A30D291CA90D88001A7E71 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 64A30D121CA90D88001A7E71 /* NTInputbar */;
+			target = 64A30D121CA90D88001A7E71 /* NTGrowInputbar */;
 			targetProxy = 64A30D281CA90D88001A7E71 /* PBXContainerItemProxy */;
 		};
 		64A30D341CA90D88001A7E71 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 64A30D121CA90D88001A7E71 /* NTInputbar */;
+			target = 64A30D121CA90D88001A7E71 /* NTGrowInputbar */;
 			targetProxy = 64A30D331CA90D88001A7E71 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -422,7 +423,7 @@
 				INFOPLIST_FILE = NTInputbar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.demon.NTInputbar;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NTGrowInputbar;
 			};
 			name = Debug;
 		};
@@ -433,7 +434,7 @@
 				INFOPLIST_FILE = NTInputbar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.demon.NTInputbar;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NTGrowInputbar;
 			};
 			name = Release;
 		};
@@ -444,8 +445,8 @@
 				INFOPLIST_FILE = NTInputbarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.demon.NTInputbarTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NTInputbar.app/NTInputbar";
+				PRODUCT_NAME = NTGrowInputbar;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NTGrowInputbar.app/NTGrowInputbar";
 			};
 			name = Debug;
 		};
@@ -456,8 +457,8 @@
 				INFOPLIST_FILE = NTInputbarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.demon.NTInputbarTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NTInputbar.app/NTInputbar";
+				PRODUCT_NAME = NTGrowInputbar;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NTGrowInputbar.app/NTGrowInputbar";
 			};
 			name = Release;
 		};
@@ -467,7 +468,7 @@
 				INFOPLIST_FILE = NTInputbarUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.demon.NTInputbarUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NTGrowInputbar;
 				TEST_TARGET_NAME = NTInputbar;
 			};
 			name = Debug;
@@ -478,7 +479,7 @@
 				INFOPLIST_FILE = NTInputbarUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.demon.NTInputbarUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NTGrowInputbar;
 				TEST_TARGET_NAME = NTInputbar;
 			};
 			name = Release;
@@ -486,7 +487,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		64A30D0E1CA90D88001A7E71 /* Build configuration list for PBXProject "NTInputbar" */ = {
+		64A30D0E1CA90D88001A7E71 /* Build configuration list for PBXProject "NTGrowInputbar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				64A30D391CA90D88001A7E71 /* Debug */,
@@ -495,7 +496,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		64A30D3B1CA90D88001A7E71 /* Build configuration list for PBXNativeTarget "NTInputbar" */ = {
+		64A30D3B1CA90D88001A7E71 /* Build configuration list for PBXNativeTarget "NTGrowInputbar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				64A30D3C1CA90D88001A7E71 /* Debug */,
@@ -504,7 +505,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		64A30D3E1CA90D88001A7E71 /* Build configuration list for PBXNativeTarget "NTInputbarTests" */ = {
+		64A30D3E1CA90D88001A7E71 /* Build configuration list for PBXNativeTarget "NTGrowInputbarTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				64A30D3F1CA90D88001A7E71 /* Debug */,
@@ -513,7 +514,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		64A30D411CA90D88001A7E71 /* Build configuration list for PBXNativeTarget "NTInputbarUITests" */ = {
+		64A30D411CA90D88001A7E71 /* Build configuration list for PBXNativeTarget "NTGrowInputbarUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				64A30D421CA90D88001A7E71 /* Debug */,

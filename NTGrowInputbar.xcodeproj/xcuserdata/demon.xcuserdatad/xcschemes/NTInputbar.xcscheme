@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "64A30D121CA90D88001A7E71"
-               BuildableName = "NTInputbar.app"
-               BlueprintName = "NTInputbar"
-               ReferencedContainer = "container:NTInputbar.xcodeproj">
+               BuildableName = "NTGrowInputbar.app"
+               BlueprintName = "NTGrowInputbar"
+               ReferencedContainer = "container:NTGrowInputbar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "64A30D261CA90D88001A7E71"
-               BuildableName = "NTInputbarTests.xctest"
-               BlueprintName = "NTInputbarTests"
-               ReferencedContainer = "container:NTInputbar.xcodeproj">
+               BuildableName = "NTGrowInputbar.xctest"
+               BlueprintName = "NTGrowInputbarTests"
+               ReferencedContainer = "container:NTGrowInputbar.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "64A30D311CA90D88001A7E71"
-               BuildableName = "NTInputbarUITests.xctest"
-               BlueprintName = "NTInputbarUITests"
-               ReferencedContainer = "container:NTInputbar.xcodeproj">
+               BuildableName = "NTGrowInputbar.xctest"
+               BlueprintName = "NTGrowInputbarUITests"
+               ReferencedContainer = "container:NTGrowInputbar.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "64A30D121CA90D88001A7E71"
-            BuildableName = "NTInputbar.app"
-            BlueprintName = "NTInputbar"
-            ReferencedContainer = "container:NTInputbar.xcodeproj">
+            BuildableName = "NTGrowInputbar.app"
+            BlueprintName = "NTGrowInputbar"
+            ReferencedContainer = "container:NTGrowInputbar.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "64A30D121CA90D88001A7E71"
-            BuildableName = "NTInputbar.app"
-            BlueprintName = "NTInputbar"
-            ReferencedContainer = "container:NTInputbar.xcodeproj">
+            BuildableName = "NTGrowInputbar.app"
+            BlueprintName = "NTGrowInputbar"
+            ReferencedContainer = "container:NTGrowInputbar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "64A30D121CA90D88001A7E71"
-            BuildableName = "NTInputbar.app"
-            BlueprintName = "NTInputbar"
-            ReferencedContainer = "container:NTInputbar.xcodeproj">
+            BuildableName = "NTGrowInputbar.app"
+            BlueprintName = "NTGrowInputbar"
+            ReferencedContainer = "container:NTGrowInputbar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

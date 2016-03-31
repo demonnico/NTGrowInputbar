@@ -111,11 +111,27 @@ class NTInputbar: UIView {
             textViewX = leftOne.frame.maxX+kMarginBetweenWidgets
             textViewWidth = textViewWidth - leftOne.frame.size.width - kMarginBetweenWidgets
             newHeight = max(newHeight, leftOne.frame.height + kMarginTextViewTop + kMarginTextViewBottom)
+            if leftOne.isFirstResponder() {
+                inputbarBottomHeight = (leftOne.inputView?.frame.size.height)!
+                if leftOne.inputAccessoryView == nil {                    
+                    let accessoryView = BABFrameObservingInputAccessoryView.init(frame: CGRectZero)
+                    leftOne.inputAccessoryView = accessoryView
+                    accessoryView.inputAccessoryViewFramwChanged = (textView.inputAccessoryView as! BABFrameObservingInputAccessoryView).inputAccessoryViewFramwChanged
+                }
+            }
         }
         if let rightOne = buttonRight {
             rightOne.userInteractionEnabled = true
             textViewWidth = textViewWidth - rightOne.frame.size.width - kMarginBetweenWidgets
             newHeight = max(newHeight, rightOne.frame.height + kMarginTextViewTop + kMarginTextViewBottom)
+            if rightOne.isFirstResponder() {
+                inputbarBottomHeight = (rightOne.inputView?.frame.size.height)!
+                if rightOne.inputAccessoryView == nil {
+                    let accessoryView = BABFrameObservingInputAccessoryView.init(frame: CGRectZero)
+                    rightOne.inputAccessoryView = accessoryView
+                    accessoryView.inputAccessoryViewFramwChanged = (textView.inputAccessoryView as! BABFrameObservingInputAccessoryView).inputAccessoryViewFramwChanged
+                }
+            }
         }
         
         let bottom = frame.maxY;
