@@ -58,7 +58,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         inputBar.inputbarHeightChanged = { [unowned self] height in
             self.bottomConstraint.constant = height
-            inputBar.frame.origin.y = self.textView.frame.height+20//status bar height is 20
+            inputBar.frame.origin.y = self.textView.frame.height+20+44//status bar height is 20, navigation is 44
         }
         
         let leftButton = NTResponderButton.init(frame: CGRectMake(0, 0, 44, 44))
