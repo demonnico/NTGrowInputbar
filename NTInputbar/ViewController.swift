@@ -14,15 +14,27 @@ extension UIScrollView :InputbarAttachedScrollViewProtocol{
     }
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var inputBarIB: NTInputbar!
+    @IBOutlet weak var inputBarIB: NTGrowInputbar!
+    @IBOutlet weak var tableView: UITableView!
     
-    override var inputAccessoryView: UIView?{
-        get{
-            return self.inputBarIB
+    let inputTrigger = NTInputbarTrigger.init(frame: CGRectZero)
+    
+    @IBAction func segmentControlTapped(sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            self.textView.hidden = false
+            self.inputBarIB.hidden = false
+            self.tableView.hidden = true
+        }else{
+            let triggerInputbar = NTGrowInputbar.init(frame: CGRectMake(0, 0, self.view.frame.size.width, 30))
+            inputTrigger.resetTriggerAccessoryView(triggerInputbar)
+            
+            self.textView.hidden = true
+            self.inputBarIB.hidden = true
+            self.tableView.hidden = false
         }
     }
     
@@ -30,6 +42,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.textView.keyboardDismissMode = .Interactive
+        
+        self.view.addSubview(self.inputTrigger)
         
         let inputBar = self.inputBarIB //NTInputbar.init(frame: CGRectMake(0, 100, 300, 40))
         
@@ -39,7 +53,7 @@ class ViewController: UIViewController {
         inputBar.textView.backgroundColor = UIColor.yellowColor()
         inputBar.textView.layer.cornerRadius = 3.0
         inputBar.attachedScrollView = self.textView
-        inputBar.textView.atMentonTrigger = {
+        inputBar.textView.atMentonTrigger = { 
             inputBar.textView.insertMetionedMemberName("JoJo")
         }
         inputBar.inputbarHeightChanged = { [unowned self] height in
@@ -77,7 +91,18 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    //tableview delegate && datasource method
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 100
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.inputTrigger.showInputbarInTableview(tableView, indexPath: indexPath)
+    }
 }
 
