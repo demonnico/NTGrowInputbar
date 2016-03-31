@@ -112,6 +112,7 @@ class NTGrowInputbar: UIView {
         if let object = notification.object {
             if object as! UITextView == textView {
                 self.setNeedsLayout()
+                textView.setNeedsDisplay()
             }
         }
     }
