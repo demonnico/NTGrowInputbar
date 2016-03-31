@@ -86,6 +86,7 @@ class NTGrowInputbar: UIView {
                 self.inputbarHeightChanged!(self.frame.height + self.firstResponderInputViewAreaHeight())
             }
         }
+        
         addSubview(textView)
         NSNotificationCenter.defaultCenter().addObserver(self,
                                                          selector: #selector(textViewTextChanged),
@@ -110,7 +111,7 @@ class NTGrowInputbar: UIView {
     @objc private func textViewTextChanged(notification :NSNotification) {
         if let object = notification.object {
             if object as! UITextView == textView {
-                textView.setNeedsLayout()
+                self.setNeedsLayout()
             }
         }
     }

@@ -77,12 +77,17 @@ class NTInputbarTrigger: NTResponderButton {
     }
     
     override func becomeFirstResponder() -> Bool {
-        super.becomeFirstResponder()
-        return (self.triggerAccessoryView?.textView.becomeFirstResponder())!
+        let responderResult = super.becomeFirstResponder()
+        if let accessoryView = self.triggerAccessoryView {
+            return accessoryView.textView.becomeFirstResponder()
+        }else{
+            return responderResult
+        }
     }
     
     func resetTriggerAccessoryView(accessoryView :NTGrowInputbar) {
         self.triggerAccessoryView = accessoryView
+        accessoryView.textView.inputAccessoryView = nil
     }
     
     override var inputAccessoryView: UIView?{
