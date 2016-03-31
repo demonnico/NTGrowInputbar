@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         inputBar.textView.atMentonTrigger = {
             inputBar.textView.insertMetionedMemberName("JoJo")
         }
-        inputBar.inputbarHeightChanged = {height in
+        inputBar.inputbarHeightChanged = { [unowned self] height in
             self.bottomConstraint.constant = height
             inputBar.frame.origin.y = self.textView.frame.height+20//status bar height is 20
         }

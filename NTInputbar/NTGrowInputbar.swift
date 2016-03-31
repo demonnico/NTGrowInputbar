@@ -90,7 +90,7 @@ class NTInputbar: UIView {
         
         let accessoryView = BABFrameObservingInputAccessoryView.init(frame: CGRectZero)
         textView.inputAccessoryView = accessoryView
-        accessoryView.inputAccessoryViewFrameChanged = {frame in
+        accessoryView.inputAccessoryViewFrameChanged = { [unowned self] frame in
             if self.inputbarHeightChanged != nil {
                 self.inputbarHeightChanged!(self.frame.height + self.firstResponderInputViewAreaHeight())
             }
@@ -116,7 +116,7 @@ class NTInputbar: UIView {
         }
     }
     
-    func textViewTextChanged(notification :NSNotification) {
+    @objc private func textViewTextChanged(notification :NSNotification) {
         if let object = notification.object {
             if object as! UITextView == textView {
                 textView.setNeedsLayout()
@@ -124,7 +124,7 @@ class NTInputbar: UIView {
         }
     }
     
-    func textViewDidBeginEditing(notification :NSNotification) {
+    @objc private func textViewDidBeginEditing(notification :NSNotification) {
         if let objet = notification.object {
             if objet as! UITextView == textView {
                 attachedScrollView?.scrollToBottom()
