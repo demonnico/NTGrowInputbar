@@ -16,10 +16,12 @@ class NTInputbarTrigger: NTResponderButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        commitInit()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        commitInit()
     }
     
     override func commitInit() {
@@ -27,7 +29,7 @@ class NTInputbarTrigger: NTResponderButton {
         NSNotificationCenter.defaultCenter().addObserver(self,
                                                          selector: #selector(keyboardWillshow),
                                                          name: UIKeyboardWillShowNotification,
-                                                         object: self)
+                                                         object: nil)
     }
     
     deinit{
@@ -36,16 +38,14 @@ class NTInputbarTrigger: NTResponderButton {
     
     @objc private func keyboardWillshow(notification :NSNotification)  {
         if let userInfo = notification.userInfo {
-            if let object = notification.object {
-                if object as? UITextView == self.triggerAccessoryView?.textView {
-                    let frameValue = userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue
-                    let currentContentOffset = self.scrollView?.contentOffset
-                    let applicationFrame = UIScreen.mainScreen().bounds
-                    let newContentOffsetY = self.offsetY! - (applicationFrame.size.height - frameValue.CGRectValue().size.height)
-                    var newContentOffset = CGPointMake((currentContentOffset?.x)!, newContentOffsetY)
-                    newContentOffset.y = newContentOffset.y <= 0 ? 0 : newContentOffset.y;
-                    self.scrollView?.setContentOffset(newContentOffset, animated: true)
-                }
+            if self.scrollView != nil{
+                let frameValue = userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue
+                let currentContentOffset = self.scrollView?.contentOffset
+                let applicationFrame = UIScreen.mainScreen().bounds
+                let newContentOffsetY = self.offsetY! - (applicationFrame.size.height - frameValue.CGRectValue().size.height) + 64.0
+                var newContentOffset = CGPointMake((currentContentOffset?.x)!, newContentOffsetY)
+                newContentOffset.y = newContentOffset.y <= 0 ? 0 : newContentOffset.y;
+                self.scrollView?.setContentOffset(newContentOffset, animated: true)
             }
         }
     }
@@ -54,12 +54,14 @@ class NTInputbarTrigger: NTResponderButton {
     //public API
     func showInputbarInTableview(tableview :UITableView, indexPath :NSIndexPath) {
         let selectRect = tableview.rectForRowAtIndexPath(indexPath)
-        showInputbarInScollView(tableview, offsetY: selectRect.origin.y)
+        showInputbarInScollView(tableview, offsetY: selectRect.origin.y+selectRect.size.height)
     }
     
     func showInputbarInCollectionView(collectionView :UICollectionView, indexPath :NSIndexPath){
         let layoutAttribute = collectionView.collectionViewLayout.layoutAttributesForItemAtIndexPath(indexPath)
-        showInputbarInScollView(collectionView, offsetY: (layoutAttribute?.frame.origin.y)!)
+        if let attribute = layoutAttribute {
+            showInputbarInScollView(collectionView, offsetY: attribute.frame.origin.y + attribute.frame.size.height)
+        }
     }
     
     func showInputbarInScollView(scrollView :UIScrollView, offsetY :CGFloat) {
@@ -69,6 +71,8 @@ class NTInputbarTrigger: NTResponderButton {
     }
     
     override func endEditing(force: Bool) -> Bool {
+        self.scrollView = nil
+        self.offsetY = 0.0
         return super.endEditing(force)
     }
     
