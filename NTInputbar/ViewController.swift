@@ -47,7 +47,7 @@ class ViewController: UIViewController {
             inputBar.frame.origin.y = self.textView.frame.height+20//status bar height is 20
         }
         
-        let leftButton = NTResponseButton.init(frame: CGRectMake(0, 0, 44, 44))
+        let leftButton = NTResponderButton.init(frame: CGRectMake(0, 0, 44, 44))
         leftButton.setTitle("voice", forState: .Normal)
         leftButton.setTitleColor(UIColor.redColor(), forState: .Normal)
         leftButton.backgroundColor =  UIColor.lightGrayColor()
@@ -57,8 +57,7 @@ class ViewController: UIViewController {
         leftButton.enabled = true
         inputBar.buttonLeft = leftButton
     
-        
-        let rightButton = NTResponseButton.init(frame: CGRectMake(0, 0, 44, 44))
+        let rightButton = NTResponderButton.init(frame: CGRectMake(0, 0, 44, 44))
         rightButton.setTitle("Ex", forState: .Normal)
         rightButton.setTitleColor(leftButton.titleColorForState(.Normal), forState: .Normal)
         rightButton.backgroundColor = leftButton.backgroundColor

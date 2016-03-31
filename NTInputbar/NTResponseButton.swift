@@ -1,5 +1,5 @@
 //
-//  NTResponseButton.swift
+//  NTResponderButton.swift
 //  NTInputbar
 //
 //  Created by Nicholas Tau on 3/29/16.
@@ -16,7 +16,7 @@ import UIKit
 //    var inputView: UIView? {get set}
 //    var inputAccessoryView: UIView{get set}
 }
-class NTResponseButton: UIButton, UIKeyInput, UITextInputTraits {
+class NTResponderButton: UIButton, UIKeyInput, UITextInputTraits {
     
     private var realTurnKeyType: UIReturnKeyType! = .Send
     private var realEnablesReturnKeyAutomatically: Bool = true

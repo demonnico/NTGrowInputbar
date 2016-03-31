@@ -51,7 +51,7 @@ class NTInputbar: UIView {
     }
     
     var attachedScrollView :UIScrollView?
-    var buttonLeft: NTResponseButton?{
+    var buttonLeft: NTResponderButton?{
         willSet{
             buttonLeft?.removeFromSuperview()
         }
@@ -60,7 +60,7 @@ class NTInputbar: UIView {
             setNeedsLayout()
         }
     }
-    var buttonRight: NTResponseButton?{
+    var buttonRight: NTResponderButton?{
         willSet{
             buttonRight?.removeFromSuperview()
         }
@@ -192,7 +192,7 @@ class NTInputbar: UIView {
         }
     }
     
-    func extentionButtonTapped(sender :NTResponseButton) {
+    func extentionButtonTapped(sender :NTResponderButton) {
         if sender.inputAccessoryView == nil {
             let accessoryView = BABFrameObservingInputAccessoryView.init(frame: CGRectZero)
             sender.inputAccessoryView = accessoryView

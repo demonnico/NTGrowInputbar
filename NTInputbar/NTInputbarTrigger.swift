@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NTInputbarTrigger: NTResponseButton {
+class NTInputbarTrigger: NTResponderButton {
 
     /*
     // Only override drawRect: if you perform custom drawing.
