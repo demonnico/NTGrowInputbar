@@ -66,7 +66,7 @@ class NTResponderButton: UIButton, UIKeyInput, UITextInputTraits {
     }
     
     func commitInit() {
-        userInteractionEnabled = true
+        
     }
     
     func hasText() -> Bool {
